@@ -26,12 +26,12 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           # ✅ Safety check — fail if token is missing
-        if [ -z "$HF_TOKEN" ]; then
-          echo "❌ HF_TOKEN is not set. Please add it as a GitHub Actions secret."
-          exit 1
-        else
-          echo "✅ HF_TOKEN is set. Proceeding with deploy."
-        fi
+          if [ -z "$HF_TOKEN" ]; then
+            echo "❌ HF_TOKEN is not set. Please add it as a GitHub Actions secret."
+            exit 1
+          else
+            echo "✅ HF_TOKEN is set. Proceeding with deploy."
+          fi
           git config --global user.email "hiteshbwankhede@gmail.com"
           git config --global user.name "hiteshbwankhede"
           git remote set-url origin https://hiteshbwankhede:${HF_TOKEN}@huggingface.co/spaces/hiteshbwankhede/GenAI-Story-Generator
