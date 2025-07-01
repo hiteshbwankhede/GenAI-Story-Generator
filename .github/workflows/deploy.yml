@@ -1,0 +1,32 @@
+name: Deploy to Hugging Face
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Push to Hugging Face
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "hiteshbwankhede@gmail.com"
+          git config --global user.name "hiteshbwankhede"
+          git remote set-url origin https://username:${HF_TOKEN}@huggingface.co/spaces/hiteshbwankhede/GenAI-Story-Generator
+          git push origin main
+          
