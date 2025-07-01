@@ -27,6 +27,6 @@ jobs:
         run: |
           git config --global user.email "hiteshbwankhede@gmail.com"
           git config --global user.name "hiteshbwankhede"
-          git remote set-url origin https://username:${HF_TOKEN}@huggingface.co/spaces/hiteshbwankhede/GenAI-Story-Generator
+          git remote set-url origin https://hiteshbwankhede:${HF_TOKEN}@huggingface.co/spaces/hiteshbwankhede/GenAI-Story-Generator
           git push origin main
           
