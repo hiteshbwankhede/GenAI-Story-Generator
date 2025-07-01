@@ -13,6 +13,8 @@ pinned: false
 
 🏷️ A Streamlit app built with LangChain, Groq, and LangSmith to generate creative short stories based on user topics and temperature control.
 
+Demo Link: https://huggingface.co/spaces/hiteshbwankhede/GenAI-Story-Generator 
+
 ---
 
 ## 🚀 Features
