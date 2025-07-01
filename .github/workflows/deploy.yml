@@ -30,7 +30,7 @@ jobs:
             echo "❌ HF_TOKEN is not set. Please add it as a GitHub Actions secret."
             exit 1
           else
-            echo "✅ HF_TOKEN is set. Proceeding with deploy."
+            echo "✅ HF_TOKEN is set. Proceeding with deploy"
           fi
           git config --global user.email "hiteshbwankhede@gmail.com"
           git config --global user.name "hiteshbwankhede"
